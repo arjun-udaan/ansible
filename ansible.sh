@@ -11,12 +11,12 @@ if [ "$(id -u)" != "0" ] ; then
 fi
 
 #install SSH services
-#sudo apt install -y openssh-server 
-sudo pacman -Syu
+sudo apt install -y openssh-server 
+#sudo pacman -Syu
 
 #ipdetails
-#ip="$(ip -o -4 addr list enp1s0 | awk '{print $4}' | cut -d/ -f1)"
-ip="$(ip -o -4 addr list wlp3s0 | awk '{print $4}' | cut -d/ -f1)"
+ip="$(ip -o -4 addr list enp1s0 | awk '{print $4}' | cut -d/ -f1)"
+#ip="$(ip -o -4 addr list wlp3s0 | awk '{print $4}' | cut -d/ -f1)"
 
 # Display the current hostname
 CUR_HOSTNAME=$(cat /etc/hostname)
